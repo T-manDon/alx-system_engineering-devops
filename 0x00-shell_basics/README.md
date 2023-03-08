@@ -5,3 +5,4 @@ Display current directory contents, including hidden files
 Display current directory contents
 Create a script that creates a directory named
 Create a script that creates a directory named
+Welcome
