@@ -6,3 +6,4 @@ Display current directory contents
 Create a script that creates a directory named
 Create a script that creates a directory named
 Welcome
+Move the file
