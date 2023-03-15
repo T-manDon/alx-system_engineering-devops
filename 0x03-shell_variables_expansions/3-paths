@@ -1,2 +1,2 @@
 #!/bin/bash
-3-paths
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
