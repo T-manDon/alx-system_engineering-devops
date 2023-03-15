@@ -1,1 +1,2 @@
-alias
+#!/bin/bash
+shell init files
