@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script tarts apache2 in docker
+# container and return a page Hello Holberton upon querying its root it
+echo "Hello Holberton" >> /etc/apache2 conf
+service apache2 strat
