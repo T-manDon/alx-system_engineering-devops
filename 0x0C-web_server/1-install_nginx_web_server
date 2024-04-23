@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
-# Installs, configures, and starts the server
-# Imanol Asolo
-sudo apt-get update
-sudo apt-get install -y nginx
-sudo chown -R ubuntu /var/www
-echo "Hello World" > /var/www/html/index.nginx-debian.html
-sudo service nginx start
+#Script transfers file from client to a server
+
+# Check the provided parameters
+if [ $# -lt 4 ]; then
+  echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+  exit 1
+fi
+
+file_path=$1
+server_ip=$2
+username=$3
+ssh_key=$4
+
+# Transfer the file using scp
+scp -o StrictHostKeyChecking=no -i "$ssh_key" "$file_path" "$username@$server_ip:~/"
+
+exit 0
