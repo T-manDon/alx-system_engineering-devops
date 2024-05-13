@@ -1,12 +1,7 @@
-# !/usr/bin/env bash
-# Script that configs the firewall to block incoming traffic
-# except TCP ports 22, 443 and 80
-
-sudo apt install ufw
-sudo ufw default allow outgoing
-sudo ufw default deny incoming
-sudo ufw allow 22/tcp
-sudo ufw allow 443/tcp
-sudo ufw allow 80/tcp
-sudo ufw enable
-sudo ufw disable
+#!/bin/bash env
+# script sets up a few firewall rules on web-01.
+ufw default deny incoming
+ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw enable
