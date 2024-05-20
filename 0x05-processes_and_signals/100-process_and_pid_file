@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Script creates the file /var/run/holbertonscript.pid containing its PID.
+#+ will display "To infinity and beyond" indefinitely
+#+ displays "I hate the kill command" upon receiving a SIGTERM
+#+ receiving a SIGINT
+#+ will deletes the file /var/run/holbertonscript.pid and
+#+ will terminat after receiving the SIGQUIT or SIGTERM.
+
+terminate() {
+  rm /var/run/myscript.pid
+  exit
+}
+
+echo "$$" > /var/run/myscript.pid
+
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
+  trap 'echo "Y U no love me?!"' SIGINT
+  trap 'echo "I hate the kill command" && terminate' SIGTERM
+  trap 'terminate' SIGQUIT
+done
