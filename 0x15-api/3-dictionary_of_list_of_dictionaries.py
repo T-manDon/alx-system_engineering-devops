@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" This function xports the to-do list info of all employees into JSON format."""
+"""Fuction will exports the to-do list info of all employees to JSON format."""
 import json
 import requests
+
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
