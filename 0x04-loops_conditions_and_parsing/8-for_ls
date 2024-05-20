@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# The script will display current directory
+# In a list format or
+# if only the part of name after dash is displayed
+LIST="$(ls)"
+for i in $LIST; do
+    NEWNAME=$(echo "$i" | cut -d'-' -f2)
+    echo "$NEWNAME"
+done

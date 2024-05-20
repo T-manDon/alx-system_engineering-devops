@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# The script will show the content of the file /etc/passwd
+# will show username, user id, and path for the user
+while IFS= read -r LINE; do
+    echo "$LINE" | cut -d':' -f1,4,7
+done < /etc/passwd

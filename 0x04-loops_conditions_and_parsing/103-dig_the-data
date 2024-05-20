@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# The script will display the number of times specific IP and HTTP code recurss in log access file
+awk '{ print $1,$9 }' apache-access.log | sort | uniq -c | sort -rn
