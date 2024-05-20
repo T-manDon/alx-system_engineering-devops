@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# The script writes "I am alive" to the file /tmp/my_process with anotherpause between each message.
+
+while true; do
+    sudo bash -c 'echo "I am alive!" >> /tmp/my_process'
+    sleep 2
+done
