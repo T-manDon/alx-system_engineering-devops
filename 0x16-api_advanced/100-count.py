@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""The function will query Reddit API
+"""
+Defines a function that queries Reddit API
 """
 import requests
 
+
 def count_words(subreddit, word_list, after=None, sort=True):
     """
-    Function will query the Reddit API, parse all the rticle title,
-    and will print the sort count of the selected keywords delimited with
-    spaces. Javascript will be considered javascript and not java
+    Queries the Reddit API, parses the title of all hot articles,
+    and prints a sorted count of given keywords (case-insensitive, delimited
+    by spaces. Javascript should count as javascript, but java should not)
     Ags:
         subreddit (str): name of subreddit
         word_list (list): keywords to look out for
