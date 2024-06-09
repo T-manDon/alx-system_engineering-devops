@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Function queries Reddit API
+"""
+Defines the func to queryy Reddit API
 """
 import requests
 
+
 def number_of_subscribers(subreddit):
     """
-    The funtion will query Reddit API and list number of
-    subscribers for the given subreddit
+    Queries all of the Reddit API to return the valuer of
+    subscribers (not active users, total subscribers) for a given subreddit
     """
     subscribers = 0
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)

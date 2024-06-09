@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-This function queries the Reddit API
+Defines a function that queries Reddit API
 """
 import requests
 
 
 def top_ten(subreddit):
     """
-    Function to query Reddit API and prints the titles
-    of the initial 10 hot posts for the subreddit
+    Queries the Reddit API and prints the titles
+    of the first 10 hot posts listed for a given subreddit
     """
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {'User-Agent': 'advanced-api/0.0.1 by Mendy'}

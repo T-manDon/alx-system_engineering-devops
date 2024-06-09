@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-This function queries Reddit API
+Defines a function that queries Reddit API
 """
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=None):
     """
-    Ths function will quesry Reddit API and list all the
-    the titles of hot articles for the subreddit.
+    Queryy all Reddit API to return a list containing
+    the article ttitl for hot articles for a given subreddit.
     Args:
         subreddit (str): name of a subreddit
     Return:
