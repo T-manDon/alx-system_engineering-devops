@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """
-Defines the func to queryy Reddit API
+Defines a function that queries Reddit API
 """
 import requests
 
-
 def number_of_subscribers(subreddit):
     """
-    Queries all of the Reddit API to return the valuer of
+    Queries the Reddit API and returns the number of
     subscribers (not active users, total subscribers) for a given subreddit
     """
     subscribers = 0
@@ -17,4 +16,4 @@ def number_of_subscribers(subreddit):
     if req.status_code == 200:
         response = req.json()
         subscribers = response['data']['subscribers']
-    return subscribers
+    return subscribersi
