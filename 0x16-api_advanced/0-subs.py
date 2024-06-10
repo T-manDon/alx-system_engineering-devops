@@ -4,6 +4,7 @@ Defines a function that queries Reddit API
 """
 import requests
 
+
 def number_of_subscribers(subreddit):
     """
     Queries the Reddit API and returns the number of
@@ -16,4 +17,4 @@ def number_of_subscribers(subreddit):
     if req.status_code == 200:
         response = req.json()
         subscribers = response['data']['subscribers']
-    return subscribersi
+    return subscribers
